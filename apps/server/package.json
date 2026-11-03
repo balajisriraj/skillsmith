@@ -1,0 +1,28 @@
+{
+  "name": "@skillsmith/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/main.ts",
+    "start": "tsx src/main.ts",
+    "build": "tsc -p .",
+    "test": "vitest run",
+    "typecheck": "tsc -p .",
+    "eval": "tsx src/evals.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.4.0",
+    "@hono/node-server": "^2.1.0",
+    "@skillsmith/core": "workspace:*",
+    "hono": "^4.10.0",
+    "tsx": "^4.20.0",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "fflate": "^0.8.2",
+    "typescript": "~5.9.0",
+    "vitest": "^3.2.0"
+  }
+}

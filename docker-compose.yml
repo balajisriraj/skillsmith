@@ -1,0 +1,16 @@
+# API + web UI on http://localhost:8080. Sessions persist in the `drawings` volume.
+#   cp .env.example .env   # add ANTHROPIC_API_KEY, or set SKILLSMITH_LLM=scripted to run offline
+#   docker compose up --build
+services:
+  api:
+    build: { context: ., dockerfile: Dockerfile.server }
+    env_file: .env
+    volumes: [drawings:/data]
+
+  web:
+    build: { context: ., dockerfile: Dockerfile.web }
+    ports: ["8080:80"]
+    depends_on: [api]
+
+volumes:
+  drawings:
