@@ -2,9 +2,8 @@
 
 **Turn know-how into agent skills.**
 
-[![SkillSmith film](docs/demo.gif)](docs/skillsmith-promo.mp4)
+<!-- The film: drag docs/skillsmith-promo.mp4 onto the line below in the GitHub editor. -->
 
-**[Watch the full film with sound](docs/skillsmith-promo.mp4)** (1 min 50 s)
 
 Describe a workflow you know well. SkillSmith interviews you until it understands the job, then:
 - drafts an [Agent Skill](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview): a `SKILL.md` plus reference files
@@ -103,7 +102,7 @@ The promo is made in code, not screen-recorded. `promo/capture.mjs` runs the rea
 ```bash
 cd promo && pnpm install --ignore-workspace
 node capture.mjs        # snapshots of the real UI
-node kit/render.mjs     # the film, the poster and the GIF in docs/
+node kit/render.mjs     # the film, in docs/
 ```
 
 ---
