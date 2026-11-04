@@ -2,14 +2,16 @@
 
 **Turn know-how into agent skills.**
 
+[![SkillSmith film](docs/demo.gif)](docs/skillsmith-promo.mp4)
+
+**[Watch the full film with sound](docs/skillsmith-promo.mp4)** (1 min 50 s)
+
 Describe a workflow you know well. SkillSmith interviews you until it understands the job, then:
 - drafts an [Agent Skill](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview): a `SKILL.md` plus reference files
 - lints it against the format
 - tests it against realistic requests *and* near-misses that should not trigger it
 - fixes what fails, round after round, until it passes
 - hands you a bundle ready for the Claude apps, Claude Code or the Claude API
-
-![The forge bench: test matrix across rounds, what the fix changed, live-linted bundle, export targets](docs/forge.jpg)
 
 ## What it shows
 
@@ -92,6 +94,16 @@ Under the scripted model, a first draft's description covers only the first trig
 packages/core/   schemas.ts (Zod) · lint.ts · frontmatter.ts · bundle.ts (zip, completeness)
 apps/server/     forge.ts (the loop and prompts) · llm.ts (Claude) · scripted.ts · live.ts (Skills API) · server.ts (Hono + SSE)
 apps/web/        SpecSheet · ForgeBench (schematic, test matrix, bundle editor with live lint, export)
+```
+
+## The film
+
+The promo is made in code, not screen-recorded. `promo/capture.mjs` runs the real app on the scripted model, interviews it, forges the skill and breaks a lint rule the way a user would, and saves DOM snapshots of each moment. `promo/kit/render.mjs` replays those snapshots as live HTML with a moving camera, captions and kinetic type, renders it frame by frame and adds an original score synthesised in Python (`promo/kit/score.py`).
+
+```bash
+cd promo && pnpm install --ignore-workspace
+node capture.mjs        # snapshots of the real UI
+node kit/render.mjs     # the film, the poster and the GIF in docs/
 ```
 
 ---
