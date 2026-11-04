@@ -12,6 +12,13 @@ Describe a workflow you know well. SkillSmith interviews you until it understand
 - fixes what fails, round after round, until it passes
 - hands you a bundle ready for the Claude apps, Claude Code or the Claude API
 
+
+
+
+https://github.com/user-attachments/assets/62da9f9b-9c7e-40e2-8dce-717e41011043
+
+
+
 ## What it shows
 
 | | |
