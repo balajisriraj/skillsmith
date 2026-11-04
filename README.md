@@ -2,8 +2,9 @@
 
 **Turn know-how into agent skills.**
 
-<!-- The film: drag docs/skillsmith-promo.mp4 onto the line below in the GitHub editor. -->
+https://github.com/user-attachments/assets/62da9f9b-9c7e-40e2-8dce-717e41011043
 
+<sub>▶ The film, with sound (1 min 50 s). <a href="#the-film">How it was made</a>.</sub>
 
 Describe a workflow you know well. SkillSmith interviews you until it understands the job, then:
 - drafts an [Agent Skill](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview): a `SKILL.md` plus reference files
@@ -11,13 +12,6 @@ Describe a workflow you know well. SkillSmith interviews you until it understand
 - tests it against realistic requests *and* near-misses that should not trigger it
 - fixes what fails, round after round, until it passes
 - hands you a bundle ready for the Claude apps, Claude Code or the Claude API
-
-
-
-
-https://github.com/user-attachments/assets/62da9f9b-9c7e-40e2-8dce-717e41011043
-
-
 
 ## What it shows
 
@@ -109,7 +103,7 @@ The promo is made in code, not screen-recorded. `promo/capture.mjs` runs the rea
 ```bash
 cd promo && pnpm install --ignore-workspace
 node capture.mjs        # snapshots of the real UI
-node kit/render.mjs     # the film, in docs/
+node kit/render.mjs     # the film, in promo/out/ (upload the -web.mp4 to the README)
 ```
 
 ---
